@@ -10,7 +10,7 @@ export function SearchResults({ from, to, isChecked }) {
 
   //const url = `https://api.skypicker.com/flights?fly_from=${props.from}&fly_to=${props.to}&partner=data4youcbp202106`;
   const fetchData = async () => {
-    console.log(isChecked);
+    //console.log(isChecked);
     let url = "";
     if (isChecked === true) {
       url = `https://api.skypicker.com/flights?fly_from=${from}&fly_to=${to}&partner=data4youcbp202106&max_stopovers=0`;
@@ -30,7 +30,7 @@ export function SearchResults({ from, to, isChecked }) {
     //     }
     // }
 
-    console.log(data);
+    //console.log(data);
   };
 
   //   const Spinner = () => {
