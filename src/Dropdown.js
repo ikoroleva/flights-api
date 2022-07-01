@@ -6,6 +6,7 @@ const OurDropDown = ({ setFrom, setTo }) => {
     <div className="select__flight">
       <div className="select__flight_dep">
         <Form.Select size="lg" onChange={(e) => setFrom(e.target.value)}>
+          <option>Select departure</option>
           <option value="PRG">Prague</option>
           <option value="BER">Berlin</option>
           <option value="WAW">Warsaw</option>
@@ -15,6 +16,7 @@ const OurDropDown = ({ setFrom, setTo }) => {
 
       <div className="select__flight_arr">
         <Form.Select size="lg" onChange={(e) => setTo(e.target.value)}>
+          <option>Select destination</option>
           <option value="VLC">Valencia</option>
           <option value="BCN">Barcelona</option>
           <option value="MAD">Madrid</option>
