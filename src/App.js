@@ -17,7 +17,7 @@ function App() {
         setIsChecked={setIsChecked}
         isChecked={isChecked}
       />
-      <SearchResults from={from} to={to} />
+      <SearchResults from={from} to={to} isChecked={isChecked} />
     </div>
   );
 }
