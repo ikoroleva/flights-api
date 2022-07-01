@@ -7,7 +7,7 @@ import { useState } from "react";
 function App() {
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
-  console.log(from, to);
+
   return (
     <div>
       <OurDropDown setFrom={setFrom} setTo={setTo} />
