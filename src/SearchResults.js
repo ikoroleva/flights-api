@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Flight } from "./Flight";
-import { Spinner } from "reactstrap";
 
 export function SearchResults(props) {
   const [searchResults, setSearchResults] = useState(null);
