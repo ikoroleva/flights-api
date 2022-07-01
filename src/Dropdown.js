@@ -1,5 +1,5 @@
 import { DropdownButton, Dropdown } from "react-bootstrap";
-const ourDropDown = () => {
+const OurDropDown = () => {
   return (
     <div className="select__flight">
       <div className="select__flight_dep">
@@ -23,4 +23,4 @@ const ourDropDown = () => {
   );
 };
 
-export default ourDropDown;
+export default OurDropDown;

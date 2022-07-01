@@ -1,12 +1,13 @@
 import "./App.css";
-import Dropdown from "./Dropdown";
+import { SearchResults } from "./SearchResults";
+import OurDropDown from "./Dropdown";
 
 function App() {
   return (
-    <>
-      <Dropdown />
-      <div>flights results</div>
-    </>
+    <div>
+      <SearchResults />
+      <OurDropDown />
+    </div>
   );
 }
 
