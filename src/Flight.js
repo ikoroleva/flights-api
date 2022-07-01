@@ -28,11 +28,11 @@ export function Flight({ data }) {
                 <>
                     <Card>
                         <Card.Header>
-                            From: {cityFrom} To: {cityTo}
+                            {cityFrom} &#8594; {cityTo}
                         </Card.Header>
                         <Card.Body>
                             <Card.Title>
-                                From: {cityFrom} To: {cityTo}
+                                {cityFrom} &#8594; {cityTo}
                             </Card.Title>
                             <Card.Text>
                                 <p>Airlines: {airlines[0]}</p>
