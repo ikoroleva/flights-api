@@ -3,7 +3,7 @@ import { Flight } from './Flight';
 
 export function SearchResults(props) {
 
-    const [searchResults, setSearchResults] = useState([]);
+    const [searchResults, setSearchResults] = useState(null);
 
     const url = `https://api.skypicker.com/flights?fly_from=${props.from}&fly_to=${props.to}&partner=data4youcbp202106`;
 
