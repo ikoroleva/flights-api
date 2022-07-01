@@ -7,11 +7,7 @@ function App() {
   return (
     <div>
       <OurDropDown />
-<<<<<<< HEAD
-      <SearchResults />
-=======
       <SearchResults from="PRG" to="VLC" />
->>>>>>> main
     </div>
   );
 }
