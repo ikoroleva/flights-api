@@ -47,10 +47,15 @@ export function SearchResults({ from, to, isChecked }) {
         setShowSpinner("");
     }, [from, to, isChecked]);
 
+
+    useEffect(() => {
+        setShowSpinner("none");
+    }, [searchResults]);
+
     return (
         searchResults && (
             <div className="results-container">
-                <div style={{ display: "none" }}>
+                <div style={{ display: showSpinner }}>
                     <img src="../img/spinner.svg" alt="spinner" />
                 </div>
                 <div>

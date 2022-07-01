@@ -10,7 +10,7 @@ function App() {
   const [isChecked, setIsChecked] = useState(false);
   console.log(isChecked);
   return (
-    <div>
+    <main>
       <OurDropDown
         setFrom={setFrom}
         setTo={setTo}
@@ -18,7 +18,7 @@ function App() {
         isChecked={isChecked}
       />
       <SearchResults from={from} to={to} isChecked={isChecked} />
-    </div>
+    </main>
   );
 }
 
