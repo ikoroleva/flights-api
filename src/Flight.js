@@ -9,7 +9,7 @@ export function Flight({ data }) {
 
 
 
-    const { id, aTime, dTime, cityFrom, cityTo, price, airlines, fly_duration, route } = data;
+    const { id, aTime, dTime, cityFrom, cityTo, price, airlines, fly_duration, route, deep_link } = data;
 
 
     return (
@@ -22,9 +22,11 @@ export function Flight({ data }) {
                     <p>Departure time: {DateTime.fromMillis(dTime * 1000).toFormat('hh:mm')}</p>
                     <p>Arrival time: {DateTime.fromMillis(aTime * 1000).toFormat('hh:mm')}</p>
                     <p>Price: {price} EUR</p>
+
                     {route.map((item, i) =>
                         (<FlightRoute key={i} data={item} />))
                     }
+                    <p><a href={deep_link}>Detailed</a></p>
                 </>
             }
         </div>
