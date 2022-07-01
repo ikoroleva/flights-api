@@ -43,7 +43,9 @@ export function SearchResults({ from, to, isChecked }) {
     //   };
 
     useEffect(() => {
-        fetchData();
+        if (from && to) {
+            fetchData();
+        }
         setShowSpinner("");
     }, [from, to, isChecked]);
 
