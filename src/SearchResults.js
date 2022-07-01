@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { Flight } from './Flight';
 
-export function SearchResults() {
+export function SearchResults(props) {
 
     const [searchResults, setSearchResults] = useState([]);
 
-    const url = `https://api.skypicker.com/flights?fly_from=PRG&fly_to=VLC&partner=data4youcbp202106`;
+    const url = `https://api.skypicker.com/flights?fly_from=${props.from}&fly_to=${props.to}&partner=data4youcbp202106`;
 
     const fetchData = async () => {
         const response = await fetch(url);

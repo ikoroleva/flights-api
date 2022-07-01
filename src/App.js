@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <OurDropDown />
-      <SearchResults />
+      <SearchResults from="PRG" to="VLC" />
     </div>
   );
 }
