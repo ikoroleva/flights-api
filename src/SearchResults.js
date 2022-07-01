@@ -5,6 +5,7 @@ export function SearchResults(props) {
   const [searchResults, setSearchResults] = useState(null);
   const [showSpinner, setShowSpinner] = useState("");
   const url = `https://api.skypicker.com/flights?fly_from=${props.from}&fly_to=${props.to}&partner=data4youcbp202106`;
+
   const fetchData = async () => {
     const response = await fetch(url);
     const data = await response.json();
