@@ -1,17 +1,8 @@
 import { useEffect, useState } from "react";
 import { Flight } from "./Flight";
 
-export function SearchResults() {
-  const [searchResults, setSearchResults] = useState(null);
-
-  const url = `https://api.skypicker.com/flights?fly_from=PRG&fly_to=VLC&partner=data4youcbp202106`;
-
-  const fetchData = async () => {
-    const response = await fetch(url);
-    const data = await response.json();
-    console.log(data.data);
-    setSearchResults(data.data);
-  };
+export function SearchResults(props) {
+  const url = `https://api.skypicker.com/flights?fly_from=${props.from}&fly_to=${props.to}&partner=data4youcbp202106`;
 
   useEffect(() => {
     fetchData();
