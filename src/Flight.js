@@ -64,7 +64,7 @@ export function Flight({ data }) {
                                     )}
                                 </p>
                                 <p>Price: {price} EUR</p>
-                                <p>Stopovers: {route.length}</p>
+                                <p>Stopovers: {route.length - 1}</p>
                             </Card.Text>
                             <div className="route_details" style={{ display: showRoute }}>
                                 <Card.Text>
