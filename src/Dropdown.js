@@ -1,24 +1,31 @@
-import { DropdownButton, Dropdown } from "react-bootstrap";
+import Form from "react-bootstrap/Form";
+import { useState } from "react";
+
 const OurDropDown = () => {
+  const [from, setFrom] = useState("");
+  const [to, setTo] = useState("");
+
   return (
     <div className="select__flight">
       <div className="select__flight_dep">
-        <DropdownButton id="dropdown-basic-button" title="From:">
-          <Dropdown.Item href="#/action-1">Prague</Dropdown.Item>
-          <Dropdown.Item href="#/action-2">Berlin</Dropdown.Item>
-          <Dropdown.Item href="#/action-3">Warsaw</Dropdown.Item>
-          <Dropdown.Item href="#/action-3">Pardubice</Dropdown.Item>
-        </DropdownButton>
+        <Form.Select size="lg">
+          <option>Prague</option>
+          <option>Berlin</option>
+          <option>Warsaw</option>
+          <option>Pardubice</option>
+        </Form.Select>
       </div>
+      <div className="select__flight_from">{from}</div>
       <div className="select__flight_arr">
-        <DropdownButton id="dropdown-basic-button" title="To:">
-          <Dropdown.Item href="#/action-1">Valencia</Dropdown.Item>
-          <Dropdown.Item href="#/action-2">Barcelona</Dropdown.Item>
-          <Dropdown.Item href="#/action-3">Madrid</Dropdown.Item>
-          <Dropdown.Item href="#/action-3">Milano</Dropdown.Item>
-          <Dropdown.Item href="#/action-3">Athens</Dropdown.Item>
-        </DropdownButton>
+        <Form.Select size="lg">
+          <option>Valencia</option>
+          <option>Barcelona</option>
+          <option>Madrid</option>
+          <option>Milano</option>
+          <option>Athens</option>
+        </Form.Select>
       </div>
+      <div className="select__flight_to"></div>
     </div>
   );
 };

@@ -5,8 +5,8 @@ import OurDropDown from "./Dropdown";
 function App() {
   return (
     <div>
-      <SearchResults />
       <OurDropDown />
+      <SearchResults />
     </div>
   );
 }
