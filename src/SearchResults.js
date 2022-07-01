@@ -7,6 +7,7 @@ export function SearchResults(props) {
   const url = `https://api.skypicker.com/flights?fly_from=${props.from}&fly_to=${props.to}&partner=data4youcbp202106`;
 
   const fetchData = async () => {
+    setShowSpinner("");
     const response = await fetch(url);
     const data = await response.json();
     setSearchResults(data.data);
@@ -21,19 +22,18 @@ export function SearchResults(props) {
     console.log(data.data);
   };
 
-  //   const Spinner = () => {
-  //     return <img src="../img/spinner.svg" alt="spinner" />;
-  //   };
-
   useEffect(() => {
     fetchData();
-    setShowSpinner("");
   }, [props]);
+
+  useEffect(() => {
+    setShowSpinner("none");
+  }, [searchResults]);
 
   return (
     searchResults && (
       <div className="results-container">
-        <div style={{ display: "none" }}>
+        <div style={{ display: showSpinner }}>
           <img src="../img/spinner.svg" alt="spinner" />
         </div>
         <div>
