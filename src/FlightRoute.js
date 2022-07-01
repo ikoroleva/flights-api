@@ -8,7 +8,7 @@ export function FlightRoute({ data }) {
         <div className="flight-route">
             {data &&
                 <>
-                    <h5>From: {cityFrom} To: {cityTo}</h5>
+                    <h5> {cityFrom} &#8594; {cityTo}</h5>
                     <p>Airline: {airline}</p>
                     <p>Departure: {DateTime.fromMillis(dTime * 1000).toFormat('yyyy-MM-dd hh:mm')}</p>
                     <p>Arrival: {DateTime.fromMillis(aTime * 1000).toFormat('yyyy-MM-dd hh:mm')}</p>

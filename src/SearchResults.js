@@ -35,7 +35,7 @@ export function SearchResults({ from, to, isChecked }) {
         //     }
         // }
 
-        console.log(data.data);
+        console.log(data);
     };
 
     //   const Spinner = () => {
@@ -55,17 +55,22 @@ export function SearchResults({ from, to, isChecked }) {
     }, [searchResults]);
 
     return (
-        searchResults && (
-            <div className="results-container">
-                <div style={{ display: showSpinner }}>
-                    <img src="../img/spinner.svg" alt="spinner" />
-                </div>
-                <div>
-                    {searchResults.map((item, i) => (
-                        <Flight key={i} data={item} />
-                    ))}
-                </div>
-            </div>
-        )
+        <div className="results-container">
+            {searchResults
+                ?
+                <>
+                    <div style={{ display: showSpinner }}>
+                        <img src="../img/spinner.svg" alt="spinner" />
+                    </div>
+                    <div>
+                        {searchResults.map((item, i) => (
+                            <Flight key={i} data={item} />
+                        ))}
+                    </div>
+                </>
+                : <div>No flights are found on the selected route</div>}
+        </div>
+
+
     );
 }
