@@ -20,7 +20,7 @@ export function SearchResults(props) {
     };
     useEffect(() => {
         fetchData();
-    }, []);
+    }, [props]);
 
     return (
         <div className="results-container">
