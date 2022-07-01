@@ -17,8 +17,9 @@ export function Flight({ data }) {
             {data &&
                 <>
                     <h3>From: {cityFrom} To: {cityTo}</h3>
-                    <p>Duration: {fly_duration}</p>
+
                     <p>Airlines: {airlines[0]}</p>
+                    <p>Duration: {fly_duration}</p>
                     <p>Departure time: {DateTime.fromMillis(dTime * 1000).toFormat('hh:mm')}</p>
                     <p>Arrival time: {DateTime.fromMillis(aTime * 1000).toFormat('hh:mm')}</p>
                     <p>Price: {price} EUR</p>
