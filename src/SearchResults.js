@@ -7,14 +7,14 @@ export function SearchResults(props) {
     const fetchData = async () => {
         const response = await fetch(url);
         const data = await response.json();
-
-        if (data.data) {
-            setSearchResults(data.data);
-        } else {
-            {
-                alert(data.error);
-            }
-        }
+        setSearchResults(data.data);
+        // if (data.data) {
+        //     setSearchResults(data.data);
+        // } else {
+        //     {
+        //         alert(data.error);
+        //     }
+        // }
 
         console.log(data.data);
     };
