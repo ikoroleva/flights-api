@@ -1,7 +1,9 @@
 import Form from "react-bootstrap/Form";
-import { useState } from "react";
 
-const OurDropDown = ({ setFrom, setTo }) => {
+const OurDropDown = ({ setFrom, setTo, setIsChecked, isChecked }) => {
+  const handleOnChange = () => {
+    setIsChecked(!isChecked);
+  };
   return (
     <div className="select__flight">
       <div className="select__flight_dep">
@@ -23,6 +25,15 @@ const OurDropDown = ({ setFrom, setTo }) => {
           <option value="MXP">Milano</option>
           <option value="ATH">Athens</option>
         </Form.Select>
+      </div>
+      <div>
+        <Form onChange={() => handleOnChange()}>
+          <Form.Check
+            type="switch"
+            id="custom-switch"
+            label="Only direct flights"
+          />
+        </Form>
       </div>
     </div>
   );
